@@ -1,7 +1,7 @@
 # Rails App Checklist
 A tl;dr checklist to guide your workflow for your new Rails App
 
-Author: github.com/nickoki
+Author: [Nick Oki](github.com/nickoki)
 
 ### Set Up Rails App & Database
 

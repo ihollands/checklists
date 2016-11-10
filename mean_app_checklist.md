@@ -1,6 +1,6 @@
 # MEAN Convention
 
-Co-authors: github.com/kjmahoney, github.com/michaelzlai
+Co-authors: [Kevin Mahoney](github.com/kjmahoney), [Michael Lai](github.com/michaelzlai)
 
 ### Global installs
 
