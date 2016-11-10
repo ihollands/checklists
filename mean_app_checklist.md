@@ -1,19 +1,29 @@
 # MEAN Convention
 
-## Setting up the db
+Co-authors: github.com/kjmahoney, github.com/michaelzlai
+
+### Global installs
+
+- nodemon for auto-restarting the node server
+`npm install -g nodemon`
+- jasmine for testing
+`npm install -g jasmine-node`
+
+### Setting up the db
 
 `npm init -y`
 
 `npm install --save mongoose`
 
-## Install other modules
+### Install other modules
 `npm install --save <module-name>`
 - `install` aka `i`
 - `--save` aka `-S`
 
 Other commonly used modules
 - `express` - http request library
-- `hbs` - handlebars view templating
+- `hbs` - handlebars view templating (licensed by MIT)
+- `express-handlebars` - handlebars view templating (licensed by Yahoo)
 - `body-parser` - to handle html forms
 
 ### Create other directories and files
@@ -22,7 +32,11 @@ mkdir db views public
 ```
 
 ```shell
-touch index.js db/connection.js db/models.js db/seed.js db/seeds.json views/layout.hbs
+mkdir public/css public/js
+```
+
+```shell
+touch index.js db/connection.js db/models.js db/schema.js db/seed.js db/seeds.json views/layout.hbs
 ```
 
 ### connection.js
@@ -63,7 +77,7 @@ var Schema = mongoose.Schema
 - create schemas
 ```javascript
 var CollectionNameSchema = new Schema({
-    column_name: Datatype
+  column_name: Datatype
 })
 ```
 - export schemas
@@ -110,12 +124,12 @@ module.exports = {
 - nothing else in the file
 ```json
 [
-    {
-      "thing": 1
-    },
-    {
-      "thing": 2
-    }
+  {
+    "thing": 1
+  },
+  {
+    "thing": 2
+  }
 ]
 ```
 
@@ -155,7 +169,9 @@ app.engine(".hbs", hbs({
   defaultLayout: "layout"
 }))
 ```
-- use styles
+
+
+- rename public folder to assets... it is conventional to do this?
 ```javascript
 app.use("/assets", express.static("public"))
 ```
